@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wintab Loader", "Wintab Loader\Wintab Loader.vcxproj", "{FEA5E11D-93F4-4E05-A103-4F8FE52E853D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA5E11D-93F4-4E05-A103-4F8FE52E853D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FEA5E11D-93F4-4E05-A103-4F8FE52E853D}.Debug|Win32.Build.0 = Debug|Win32
+		{FEA5E11D-93F4-4E05-A103-4F8FE52E853D}.Release|Win32.ActiveCfg = Release|Win32
+		{FEA5E11D-93F4-4E05-A103-4F8FE52E853D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

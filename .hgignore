@@ -3,6 +3,6 @@ ipch/*
 Debug/*
 Release/*
 syntax: glob
-Wintab Loader/Wintab Loader.vcxproj.user
 Wintab Loader.opensdf
 Wintab Loader.sdf
+Wintab Loader.suo

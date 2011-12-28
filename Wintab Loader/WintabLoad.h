@@ -14,7 +14,9 @@ typedef UINT (WINAPI*WTInfoW_Type)(UINT,UINT,LPVOID);
 typedef HCTX (WINAPI*WTOpenW_Type)(HWND,LPLOGCONTEXTW,BOOL);
 typedef BOOL (WINAPI*WTClose_Type)(HCTX);
 typedef int (WINAPI*WTPacketsGet_Type)(HCTX,int,LPVOID);
+typedef BOOL (WINAPI*WTGetW_Type)(HCTX,LPLOGCONTEXTW);
 typedef BOOL (WINAPI*WTEnable_Type)(HCTX,BOOL);
+typedef BOOL (WINAPI*WTOverlap_Type)(HCTX,BOOL);
 typedef int (WINAPI*WTQueueSizeGet_Type)(HCTX);
 typedef BOOL (WINAPI*WTQueueSizeSet_Type)(HCTX,int);
 
@@ -23,7 +25,9 @@ extern WTInfoW_Type WTInfoW;
 extern WTOpenW_Type WTOpenW;
 extern WTClose_Type WTClose;
 extern WTPacketsGet_Type WTPacketsGet;
+extern WTGetW_Type WTGetW;
 extern WTEnable_Type WTEnable;
+extern WTOverlap_Type WTOverlap;
 extern WTQueueSizeGet_Type WTQueueSizeGet;
 extern WTQueueSizeSet_Type WTQueueSizeSet;
 

@@ -46,6 +46,11 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Message>Copy headers and libraries to inlude directories</Message>
+      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(Root)Files\Visual Studio 2010\Headers\WintabLoad.h"
+copy /B "$(TargetPath)" "$(Root)Files\Visual Studio 2010\Static Libraries\debug $(UseDebugLibraries)\$(TargetFileName)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -60,8 +65,8 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(Root)Files\synchronized\Visual Studio 2010\Headers\WintabLoad.h"
-copy /B "$(TargetPath)" "$(Root)Files\synchronized\Visual Studio 2010\Static Libraries\$(TargetFileName)"</Command>
+      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(Root)Files\Visual Studio 2010\Headers\WintabLoad.h"
+copy /B "$(TargetPath)" "$(Root)Files\Visual Studio 2010\Static Libraries\debug $(UseDebugLibraries)\$(TargetFileName)"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy headers and libraries to inlude directories</Message>

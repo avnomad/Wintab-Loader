@@ -34,7 +34,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\Property Sheets\optimization flags.props" />
+    <Import Project="$(PropSheetDir)\optimization flags.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
@@ -48,8 +48,8 @@
     </Link>
     <PostBuildEvent>
       <Message>Copy headers and libraries to inlude directories</Message>
-      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(Root)Files\Visual Studio 2010\Headers\WintabLoad.h"
-copy /B "$(TargetPath)" "$(Root)Files\Visual Studio 2010\Static Libraries\debug $(UseDebugLibraries)\$(TargetFileName)"</Command>
+      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(LibBuildInstallDir)\Headers\WintabLoad.h"
+copy /B "$(TargetPath)" "$(LibBuildInstallDir)\Static Libraries\$(Platform) debug $(UseDebugLibraries)\$(TargetFileName)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -65,8 +65,8 @@ copy /B "$(TargetPath)" "$(Root)Files\Visual Studio 2010\Static Libraries\debug 
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(Root)Files\Visual Studio 2010\Headers\WintabLoad.h"
-copy /B "$(TargetPath)" "$(Root)Files\Visual Studio 2010\Static Libraries\debug $(UseDebugLibraries)\$(TargetFileName)"</Command>
+      <Command>copy /B "$(ProjectDir)WintabLoad.h" "$(LibBuildInstallDir)\Headers\WintabLoad.h"
+copy /B "$(TargetPath)" "$(LibBuildInstallDir)\Static Libraries\$(Platform) debug $(UseDebugLibraries)\$(TargetFileName)"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy headers and libraries to inlude directories</Message>

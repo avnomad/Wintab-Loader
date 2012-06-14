@@ -21,7 +21,7 @@
 #define WINTAB_LOAD_H
 
 /* eventually I should remove inclusions of windows.h and replace
-   its functions with others throwing exceptions and using namespaces ect. */
+   its functions with others throwing exceptions and using namespaces etc. */
 
 #include <windows.h>
 #define NOWTFUNCTIONS
